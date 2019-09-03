@@ -1,0 +1,9 @@
+{
+  "version": "1.0",
+  "plugins": {
+    "openapi": {
+      "service": "pro.travelin#Everywhere",
+      "protocol": "aws.rest-json-1.1"
+    }
+  }
+}
