@@ -23,37 +23,39 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import pro.travelin.model.ProTravelinCreateIteneraryOutputIteneraryMember;
 
 /**
  * InlineResponse2001
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-07T11:22:55.420-04:00[America/New_York]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-14T09:31:17.066+02:00[Europe/Rome]")
 public class InlineResponse2001 {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_ITENERARY = "itenerary";
+  @SerializedName(SERIALIZED_NAME_ITENERARY)
+  private ProTravelinCreateIteneraryOutputIteneraryMember itenerary;
 
 
-  public InlineResponse2001 name(String name) {
+  public InlineResponse2001 itenerary(ProTravelinCreateIteneraryOutputIteneraryMember itenerary) {
     
-    this.name = name;
+    this.itenerary = itenerary;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get itenerary
+   * @return itenerary
   **/
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
-  public String getName() {
-    return name;
+  public ProTravelinCreateIteneraryOutputIteneraryMember getItenerary() {
+    return itenerary;
   }
 
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setItenerary(ProTravelinCreateIteneraryOutputIteneraryMember itenerary) {
+    this.itenerary = itenerary;
   }
 
 
@@ -66,12 +68,12 @@ public class InlineResponse2001 {
       return false;
     }
     InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
-    return Objects.equals(this.name, inlineResponse2001.name);
+    return Objects.equals(this.itenerary, inlineResponse2001.itenerary);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name);
+    return Objects.hash(itenerary);
   }
 
 
@@ -79,7 +81,7 @@ public class InlineResponse2001 {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2001 {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    itenerary: ").append(toIndentedString(itenerary)).append("\n");
     sb.append("}");
     return sb.toString();
   }

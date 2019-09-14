@@ -23,37 +23,39 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import pro.travelin.model.ProTravelinUpdateIteneraryItemOutputIteneraryItemMember;
 
 /**
- * InlineResponse404
+ * InlineResponse2007
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-07T11:22:55.420-04:00[America/New_York]")
-public class InlineResponse404 {
-  public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resourceType";
-  @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
-  private String resourceType;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-14T09:31:17.066+02:00[Europe/Rome]")
+public class InlineResponse2007 {
+  public static final String SERIALIZED_NAME_ITENERARY_ITEM = "iteneraryItem";
+  @SerializedName(SERIALIZED_NAME_ITENERARY_ITEM)
+  private ProTravelinUpdateIteneraryItemOutputIteneraryItemMember iteneraryItem;
 
 
-  public InlineResponse404 resourceType(String resourceType) {
+  public InlineResponse2007 iteneraryItem(ProTravelinUpdateIteneraryItemOutputIteneraryItemMember iteneraryItem) {
     
-    this.resourceType = resourceType;
+    this.iteneraryItem = iteneraryItem;
     return this;
   }
 
    /**
-   * Get resourceType
-   * @return resourceType
+   * Get iteneraryItem
+   * @return iteneraryItem
   **/
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
-  public String getResourceType() {
-    return resourceType;
+  public ProTravelinUpdateIteneraryItemOutputIteneraryItemMember getIteneraryItem() {
+    return iteneraryItem;
   }
 
 
 
-  public void setResourceType(String resourceType) {
-    this.resourceType = resourceType;
+  public void setIteneraryItem(ProTravelinUpdateIteneraryItemOutputIteneraryItemMember iteneraryItem) {
+    this.iteneraryItem = iteneraryItem;
   }
 
 
@@ -65,21 +67,21 @@ public class InlineResponse404 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse404 inlineResponse404 = (InlineResponse404) o;
-    return Objects.equals(this.resourceType, inlineResponse404.resourceType);
+    InlineResponse2007 inlineResponse2007 = (InlineResponse2007) o;
+    return Objects.equals(this.iteneraryItem, inlineResponse2007.iteneraryItem);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(resourceType);
+    return Objects.hash(iteneraryItem);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse404 {\n");
-    sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
+    sb.append("class InlineResponse2007 {\n");
+    sb.append("    iteneraryItem: ").append(toIndentedString(iteneraryItem)).append("\n");
     sb.append("}");
     return sb.toString();
   }

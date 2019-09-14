@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import pro.travelin.model.ProTravelinCreateIteneraryOutputIteneraryMember;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -41,11 +42,11 @@ public class InlineResponse2001Test {
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'itenerary'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void iteneraryTest() {
+        // TODO: test itenerary
     }
 
 }

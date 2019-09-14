@@ -27,17 +27,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for InlineResponse404
+ * Model tests for InlineResponse400
  */
-public class InlineResponse404Test {
-    private final InlineResponse404 model = new InlineResponse404();
+public class InlineResponse400Test {
+    private final InlineResponse400 model = new InlineResponse400();
 
     /**
-     * Model tests for InlineResponse404
+     * Model tests for InlineResponse400
      */
     @Test
-    public void testInlineResponse404() {
-        // TODO: test InlineResponse404
+    public void testInlineResponse400() {
+        // TODO: test InlineResponse400
     }
 
     /**

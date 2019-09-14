@@ -28,9 +28,19 @@ import java.io.IOException;
 
 
 import java.math.BigDecimal;
+import pro.travelin.model.InlineObject;
+import pro.travelin.model.InlineObject1;
+import pro.travelin.model.InlineObject2;
+import pro.travelin.model.InlineObject3;
 import pro.travelin.model.InlineResponse200;
 import pro.travelin.model.InlineResponse2001;
-import pro.travelin.model.InlineResponse404;
+import pro.travelin.model.InlineResponse2002;
+import pro.travelin.model.InlineResponse2003;
+import pro.travelin.model.InlineResponse2004;
+import pro.travelin.model.InlineResponse2005;
+import pro.travelin.model.InlineResponse2006;
+import pro.travelin.model.InlineResponse2007;
+import pro.travelin.model.InlineResponse400;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -57,6 +67,462 @@ public class DefaultApi {
         this.localVarApiClient = apiClient;
     }
 
+    /**
+     * Build call for createItenerary
+     * @param inlineObject  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createIteneraryCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = inlineObject;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createIteneraryValidateBeforeCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = createIteneraryCall(inlineObject, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param inlineObject  (optional)
+     * @return InlineResponse2001
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public InlineResponse2001 createItenerary(InlineObject inlineObject) throws ApiException {
+        ApiResponse<InlineResponse2001> localVarResp = createIteneraryWithHttpInfo(inlineObject);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param inlineObject  (optional)
+     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InlineResponse2001> createIteneraryWithHttpInfo(InlineObject inlineObject) throws ApiException {
+        okhttp3.Call localVarCall = createIteneraryValidateBeforeCall(inlineObject, null);
+        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param inlineObject  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createIteneraryAsync(InlineObject inlineObject, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = createIteneraryValidateBeforeCall(inlineObject, _callback);
+        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for createIteneraryItem
+     * @param iteneraryId  (required)
+     * @param inlineObject2  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createIteneraryItemCall(String iteneraryId, InlineObject2 inlineObject2, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = inlineObject2;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}/items"
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call createIteneraryItemValidateBeforeCall(String iteneraryId, InlineObject2 inlineObject2, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling createIteneraryItem(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = createIteneraryItemCall(iteneraryId, inlineObject2, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param inlineObject2  (optional)
+     * @return InlineResponse2005
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public InlineResponse2005 createIteneraryItem(String iteneraryId, InlineObject2 inlineObject2) throws ApiException {
+        ApiResponse<InlineResponse2005> localVarResp = createIteneraryItemWithHttpInfo(iteneraryId, inlineObject2);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param inlineObject2  (optional)
+     * @return ApiResponse&lt;InlineResponse2005&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InlineResponse2005> createIteneraryItemWithHttpInfo(String iteneraryId, InlineObject2 inlineObject2) throws ApiException {
+        okhttp3.Call localVarCall = createIteneraryItemValidateBeforeCall(iteneraryId, inlineObject2, null);
+        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param iteneraryId  (required)
+     * @param inlineObject2  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> CreateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 409 </td><td> ResourceInUse 409 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call createIteneraryItemAsync(String iteneraryId, InlineObject2 inlineObject2, final ApiCallback<InlineResponse2005> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = createIteneraryItemValidateBeforeCall(iteneraryId, inlineObject2, _callback);
+        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for deleteItenerary
+     * @param iteneraryId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteItenerary response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteIteneraryCall(String iteneraryId, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}"
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteIteneraryValidateBeforeCall(String iteneraryId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling deleteItenerary(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = deleteIteneraryCall(iteneraryId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteItenerary response </td><td>  -  </td></tr>
+     </table>
+     */
+    public void deleteItenerary(String iteneraryId) throws ApiException {
+        deleteIteneraryWithHttpInfo(iteneraryId);
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteItenerary response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> deleteIteneraryWithHttpInfo(String iteneraryId) throws ApiException {
+        okhttp3.Call localVarCall = deleteIteneraryValidateBeforeCall(iteneraryId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param iteneraryId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteItenerary response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteIteneraryAsync(String iteneraryId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = deleteIteneraryValidateBeforeCall(iteneraryId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for deleteIteneraryItem
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteIteneraryItem response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteIteneraryItemCall(String iteneraryId, String itemId, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}/items/{itemId}"
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()))
+            .replaceAll("\\{" + "itemId" + "\\}", localVarApiClient.escapeString(itemId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call deleteIteneraryItemValidateBeforeCall(String iteneraryId, String itemId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling deleteIteneraryItem(Async)");
+        }
+        
+        // verify the required parameter 'itemId' is set
+        if (itemId == null) {
+            throw new ApiException("Missing the required parameter 'itemId' when calling deleteIteneraryItem(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = deleteIteneraryItemCall(iteneraryId, itemId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteIteneraryItem response </td><td>  -  </td></tr>
+     </table>
+     */
+    public void deleteIteneraryItem(String iteneraryId, String itemId) throws ApiException {
+        deleteIteneraryItemWithHttpInfo(iteneraryId, itemId);
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @return ApiResponse&lt;Void&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteIteneraryItem response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<Void> deleteIteneraryItemWithHttpInfo(String iteneraryId, String itemId) throws ApiException {
+        okhttp3.Call localVarCall = deleteIteneraryItemValidateBeforeCall(iteneraryId, itemId, null);
+        return localVarApiClient.execute(localVarCall);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 204 </td><td> DeleteIteneraryItem response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call deleteIteneraryItemAsync(String iteneraryId, String itemId, final ApiCallback<Void> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = deleteIteneraryItemValidateBeforeCall(iteneraryId, itemId, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for getItenerary
      * @param iteneraryId  (required)
@@ -117,7 +583,7 @@ public class DefaultApi {
      * 
      * 
      * @param iteneraryId  (required)
-     * @return InlineResponse2001
+     * @return InlineResponse2002
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -126,8 +592,8 @@ public class DefaultApi {
         <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 getItenerary(String iteneraryId) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = getIteneraryWithHttpInfo(iteneraryId);
+    public InlineResponse2002 getItenerary(String iteneraryId) throws ApiException {
+        ApiResponse<InlineResponse2002> localVarResp = getIteneraryWithHttpInfo(iteneraryId);
         return localVarResp.getData();
     }
 
@@ -135,7 +601,7 @@ public class DefaultApi {
      * 
      * 
      * @param iteneraryId  (required)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;InlineResponse2002&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -144,9 +610,9 @@ public class DefaultApi {
         <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> getIteneraryWithHttpInfo(String iteneraryId) throws ApiException {
+    public ApiResponse<InlineResponse2002> getIteneraryWithHttpInfo(String iteneraryId) throws ApiException {
         okhttp3.Call localVarCall = getIteneraryValidateBeforeCall(iteneraryId, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -164,10 +630,134 @@ public class DefaultApi {
         <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getIteneraryAsync(String iteneraryId, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call getIteneraryAsync(String iteneraryId, final ApiCallback<InlineResponse2002> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getIteneraryValidateBeforeCall(iteneraryId, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getIteneraryItem
+     * @param itemId  (required)
+     * @param iteneraryId  (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> GetIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getIteneraryItemCall(String itemId, String iteneraryId, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}/items/{itemId}"
+            .replaceAll("\\{" + "itemId" + "\\}", localVarApiClient.escapeString(itemId.toString()))
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getIteneraryItemValidateBeforeCall(String itemId, String iteneraryId, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'itemId' is set
+        if (itemId == null) {
+            throw new ApiException("Missing the required parameter 'itemId' when calling getIteneraryItem(Async)");
+        }
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling getIteneraryItem(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = getIteneraryItemCall(itemId, iteneraryId, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param itemId  (required)
+     * @param iteneraryId  (required)
+     * @return InlineResponse2006
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> GetIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public InlineResponse2006 getIteneraryItem(String itemId, String iteneraryId) throws ApiException {
+        ApiResponse<InlineResponse2006> localVarResp = getIteneraryItemWithHttpInfo(itemId, iteneraryId);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param itemId  (required)
+     * @param iteneraryId  (required)
+     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> GetIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InlineResponse2006> getIteneraryItemWithHttpInfo(String itemId, String iteneraryId) throws ApiException {
+        okhttp3.Call localVarCall = getIteneraryItemValidateBeforeCall(itemId, iteneraryId, null);
+        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param itemId  (required)
+     * @param iteneraryId  (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> GetIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getIteneraryItemAsync(String itemId, String iteneraryId, final ApiCallback<InlineResponse2006> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getIteneraryItemValidateBeforeCall(itemId, iteneraryId, _callback);
+        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -284,6 +874,386 @@ public class DefaultApi {
 
         okhttp3.Call localVarCall = listItenerariesValidateBeforeCall(limit, nextToken, _callback);
         Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for listIteneraryItems
+     * @param iteneraryId  (required)
+     * @param limit  (optional)
+     * @param nextToken  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> ListIteneraryItems 200 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call listIteneraryItemsCall(String iteneraryId, BigDecimal limit, String nextToken, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}/items"
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (nextToken != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("nextToken", nextToken));
+        }
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call listIteneraryItemsValidateBeforeCall(String iteneraryId, BigDecimal limit, String nextToken, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling listIteneraryItems(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = listIteneraryItemsCall(iteneraryId, limit, nextToken, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param limit  (optional)
+     * @param nextToken  (optional)
+     * @return InlineResponse2004
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> ListIteneraryItems 200 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public InlineResponse2004 listIteneraryItems(String iteneraryId, BigDecimal limit, String nextToken) throws ApiException {
+        ApiResponse<InlineResponse2004> localVarResp = listIteneraryItemsWithHttpInfo(iteneraryId, limit, nextToken);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param limit  (optional)
+     * @param nextToken  (optional)
+     * @return ApiResponse&lt;InlineResponse2004&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> ListIteneraryItems 200 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InlineResponse2004> listIteneraryItemsWithHttpInfo(String iteneraryId, BigDecimal limit, String nextToken) throws ApiException {
+        okhttp3.Call localVarCall = listIteneraryItemsValidateBeforeCall(iteneraryId, limit, nextToken, null);
+        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param iteneraryId  (required)
+     * @param limit  (optional)
+     * @param nextToken  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> ListIteneraryItems 200 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call listIteneraryItemsAsync(String iteneraryId, BigDecimal limit, String nextToken, final ApiCallback<InlineResponse2004> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = listIteneraryItemsValidateBeforeCall(iteneraryId, limit, nextToken, _callback);
+        Type localVarReturnType = new TypeToken<InlineResponse2004>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateItenerary
+     * @param iteneraryId  (required)
+     * @param inlineObject1  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateIteneraryCall(String iteneraryId, InlineObject1 inlineObject1, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = inlineObject1;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}"
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateIteneraryValidateBeforeCall(String iteneraryId, InlineObject1 inlineObject1, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling updateItenerary(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = updateIteneraryCall(iteneraryId, inlineObject1, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param inlineObject1  (optional)
+     * @return InlineResponse2003
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public InlineResponse2003 updateItenerary(String iteneraryId, InlineObject1 inlineObject1) throws ApiException {
+        ApiResponse<InlineResponse2003> localVarResp = updateIteneraryWithHttpInfo(iteneraryId, inlineObject1);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param inlineObject1  (optional)
+     * @return ApiResponse&lt;InlineResponse2003&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InlineResponse2003> updateIteneraryWithHttpInfo(String iteneraryId, InlineObject1 inlineObject1) throws ApiException {
+        okhttp3.Call localVarCall = updateIteneraryValidateBeforeCall(iteneraryId, inlineObject1, null);
+        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param iteneraryId  (required)
+     * @param inlineObject1  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateItenerary 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateIteneraryAsync(String iteneraryId, InlineObject1 inlineObject1, final ApiCallback<InlineResponse2003> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateIteneraryValidateBeforeCall(iteneraryId, inlineObject1, _callback);
+        Type localVarReturnType = new TypeToken<InlineResponse2003>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateIteneraryItem
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @param inlineObject3  (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateIteneraryItemCall(String iteneraryId, String itemId, InlineObject3 inlineObject3, final ApiCallback _callback) throws ApiException {
+        Object localVarPostBody = inlineObject3;
+
+        // create path and map variables
+        String localVarPath = "/iteneraries/{iteneraryId}/items/{itemId}"
+            .replaceAll("\\{" + "iteneraryId" + "\\}", localVarApiClient.escapeString(iteneraryId.toString()))
+            .replaceAll("\\{" + "itemId" + "\\}", localVarApiClient.escapeString(itemId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateIteneraryItemValidateBeforeCall(String iteneraryId, String itemId, InlineObject3 inlineObject3, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'iteneraryId' is set
+        if (iteneraryId == null) {
+            throw new ApiException("Missing the required parameter 'iteneraryId' when calling updateIteneraryItem(Async)");
+        }
+        
+        // verify the required parameter 'itemId' is set
+        if (itemId == null) {
+            throw new ApiException("Missing the required parameter 'itemId' when calling updateIteneraryItem(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = updateIteneraryItemCall(iteneraryId, itemId, inlineObject3, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @param inlineObject3  (optional)
+     * @return InlineResponse2007
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public InlineResponse2007 updateIteneraryItem(String iteneraryId, String itemId, InlineObject3 inlineObject3) throws ApiException {
+        ApiResponse<InlineResponse2007> localVarResp = updateIteneraryItemWithHttpInfo(iteneraryId, itemId, inlineObject3);
+        return localVarResp.getData();
+    }
+
+    /**
+     * 
+     * 
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @param inlineObject3  (optional)
+     * @return ApiResponse&lt;InlineResponse2007&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<InlineResponse2007> updateIteneraryItemWithHttpInfo(String iteneraryId, String itemId, InlineObject3 inlineObject3) throws ApiException {
+        okhttp3.Call localVarCall = updateIteneraryItemValidateBeforeCall(iteneraryId, itemId, inlineObject3, null);
+        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     *  (asynchronously)
+     * 
+     * @param iteneraryId  (required)
+     * @param itemId  (required)
+     * @param inlineObject3  (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> UpdateIteneraryItem 200 response </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> InvalidInput 400 response </td><td>  -  </td></tr>
+        <tr><td> 404 </td><td> NoSuchResource 404 response </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateIteneraryItemAsync(String iteneraryId, String itemId, InlineObject3 inlineObject3, final ApiCallback<InlineResponse2007> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateIteneraryItemValidateBeforeCall(iteneraryId, itemId, inlineObject3, _callback);
+        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

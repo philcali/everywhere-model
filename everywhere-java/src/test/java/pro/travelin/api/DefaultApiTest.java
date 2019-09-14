@@ -15,9 +15,19 @@ package pro.travelin.api;
 
 import pro.travelin.invoker.ApiException;
 import java.math.BigDecimal;
+import pro.travelin.model.InlineObject;
+import pro.travelin.model.InlineObject1;
+import pro.travelin.model.InlineObject2;
+import pro.travelin.model.InlineObject3;
 import pro.travelin.model.InlineResponse200;
 import pro.travelin.model.InlineResponse2001;
-import pro.travelin.model.InlineResponse404;
+import pro.travelin.model.InlineResponse2002;
+import pro.travelin.model.InlineResponse2003;
+import pro.travelin.model.InlineResponse2004;
+import pro.travelin.model.InlineResponse2005;
+import pro.travelin.model.InlineResponse2006;
+import pro.travelin.model.InlineResponse2007;
+import pro.travelin.model.InlineResponse400;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -44,9 +54,92 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
+    public void createIteneraryTest() throws ApiException {
+        InlineObject inlineObject = null;
+        InlineResponse2001 response = api.createItenerary(inlineObject);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void createIteneraryItemTest() throws ApiException {
+        String iteneraryId = null;
+        InlineObject2 inlineObject2 = null;
+        InlineResponse2005 response = api.createIteneraryItem(iteneraryId, inlineObject2);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteIteneraryTest() throws ApiException {
+        String iteneraryId = null;
+        api.deleteItenerary(iteneraryId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void deleteIteneraryItemTest() throws ApiException {
+        String iteneraryId = null;
+        String itemId = null;
+        api.deleteIteneraryItem(iteneraryId, itemId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
     public void getIteneraryTest() throws ApiException {
         String iteneraryId = null;
-        InlineResponse2001 response = api.getItenerary(iteneraryId);
+        InlineResponse2002 response = api.getItenerary(iteneraryId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getIteneraryItemTest() throws ApiException {
+        String itemId = null;
+        String iteneraryId = null;
+        InlineResponse2006 response = api.getIteneraryItem(itemId, iteneraryId);
 
         // TODO: test validations
     }
@@ -64,6 +157,59 @@ public class DefaultApiTest {
         BigDecimal limit = null;
         String nextToken = null;
         InlineResponse200 response = api.listIteneraries(limit, nextToken);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void listIteneraryItemsTest() throws ApiException {
+        String iteneraryId = null;
+        BigDecimal limit = null;
+        String nextToken = null;
+        InlineResponse2004 response = api.listIteneraryItems(iteneraryId, limit, nextToken);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateIteneraryTest() throws ApiException {
+        String iteneraryId = null;
+        InlineObject1 inlineObject1 = null;
+        InlineResponse2003 response = api.updateItenerary(iteneraryId, inlineObject1);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void updateIteneraryItemTest() throws ApiException {
+        String iteneraryId = null;
+        String itemId = null;
+        InlineObject3 inlineObject3 = null;
+        InlineResponse2007 response = api.updateIteneraryItem(iteneraryId, itemId, inlineObject3);
 
         // TODO: test validations
     }

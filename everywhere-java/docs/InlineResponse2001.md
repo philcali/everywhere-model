@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
+**itenerary** | [**ProTravelinCreateIteneraryOutputIteneraryMember**](ProTravelinCreateIteneraryOutputIteneraryMember.md) |  |  [optional]
 
 
 

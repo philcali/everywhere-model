@@ -23,15 +23,32 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 
 /**
  * ProTravelinItenerarySummariesMember
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-07T11:22:55.420-04:00[America/New_York]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-14T09:31:17.066+02:00[Europe/Rome]")
 public class ProTravelinItenerarySummariesMember {
   public static final String SERIALIZED_NAME_ITENERARY_ID = "iteneraryId";
   @SerializedName(SERIALIZED_NAME_ITENERARY_ID)
   private String iteneraryId;
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
+
+  public static final String SERIALIZED_NAME_START_TIME = "startTime";
+  @SerializedName(SERIALIZED_NAME_START_TIME)
+  private OffsetDateTime startTime;
+
+  public static final String SERIALIZED_NAME_END_TIME = "endTime";
+  @SerializedName(SERIALIZED_NAME_END_TIME)
+  private OffsetDateTime endTime;
 
 
   public ProTravelinItenerarySummariesMember iteneraryId(String iteneraryId) {
@@ -57,6 +74,101 @@ public class ProTravelinItenerarySummariesMember {
   }
 
 
+  public ProTravelinItenerarySummariesMember name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @ApiModelProperty(required = true, value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public ProTravelinItenerarySummariesMember description(String description) {
+    
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Get description
+   * @return description
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDescription() {
+    return description;
+  }
+
+
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
+  public ProTravelinItenerarySummariesMember startTime(OffsetDateTime startTime) {
+    
+    this.startTime = startTime;
+    return this;
+  }
+
+   /**
+   * Get startTime
+   * @return startTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getStartTime() {
+    return startTime;
+  }
+
+
+
+  public void setStartTime(OffsetDateTime startTime) {
+    this.startTime = startTime;
+  }
+
+
+  public ProTravelinItenerarySummariesMember endTime(OffsetDateTime endTime) {
+    
+    this.endTime = endTime;
+    return this;
+  }
+
+   /**
+   * Get endTime
+   * @return endTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public OffsetDateTime getEndTime() {
+    return endTime;
+  }
+
+
+
+  public void setEndTime(OffsetDateTime endTime) {
+    this.endTime = endTime;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -66,12 +178,16 @@ public class ProTravelinItenerarySummariesMember {
       return false;
     }
     ProTravelinItenerarySummariesMember proTravelinItenerarySummariesMember = (ProTravelinItenerarySummariesMember) o;
-    return Objects.equals(this.iteneraryId, proTravelinItenerarySummariesMember.iteneraryId);
+    return Objects.equals(this.iteneraryId, proTravelinItenerarySummariesMember.iteneraryId) &&
+        Objects.equals(this.name, proTravelinItenerarySummariesMember.name) &&
+        Objects.equals(this.description, proTravelinItenerarySummariesMember.description) &&
+        Objects.equals(this.startTime, proTravelinItenerarySummariesMember.startTime) &&
+        Objects.equals(this.endTime, proTravelinItenerarySummariesMember.endTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(iteneraryId);
+    return Objects.hash(iteneraryId, name, description, startTime, endTime);
   }
 
 
@@ -80,6 +196,10 @@ public class ProTravelinItenerarySummariesMember {
     StringBuilder sb = new StringBuilder();
     sb.append("class ProTravelinItenerarySummariesMember {\n");
     sb.append("    iteneraryId: ").append(toIndentedString(iteneraryId)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
+    sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

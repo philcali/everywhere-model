@@ -1,6 +1,6 @@
 
 
-# InlineResponse404
+# InlineResponse400
 
 ## Properties
 

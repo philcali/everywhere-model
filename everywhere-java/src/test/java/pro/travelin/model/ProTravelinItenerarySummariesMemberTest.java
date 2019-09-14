@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.threeten.bp.OffsetDateTime;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -46,6 +47,38 @@ public class ProTravelinItenerarySummariesMemberTest {
     @Test
     public void iteneraryIdTest() {
         // TODO: test iteneraryId
+    }
+
+    /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
+    }
+
+    /**
+     * Test the property 'description'
+     */
+    @Test
+    public void descriptionTest() {
+        // TODO: test description
+    }
+
+    /**
+     * Test the property 'startTime'
+     */
+    @Test
+    public void startTimeTest() {
+        // TODO: test startTime
+    }
+
+    /**
+     * Test the property 'endTime'
+     */
+    @Test
+    public void endTimeTest() {
+        // TODO: test endTime
     }
 
 }

@@ -18,7 +18,7 @@ import pro.travelin.invoker.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-07T11:22:55.420-04:00[America/New_York]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-09-14T09:31:17.066+02:00[Europe/Rome]")
 public class HttpBearerAuth implements Authentication {
   private final String scheme;
   private String bearerToken;
